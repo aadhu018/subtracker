@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = "force-dynamic";
+
 import SubscriptionSummary from "@/components/SubscriptionSummary";
 import Login from "@/components/Login";
 import SubscriptionsDisplay from "@/components/SubscriptionsDisplay";
