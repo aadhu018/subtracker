@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SubTracker
+
+A full-stack subscription tracker built with **Next.js** and **Firebase**.
+
+SubTracker helps users manage and keep track of their recurring subscriptions in one place. Users can create an account, sign in securely, and store their subscription data in the cloud.
+
+The goal of this project was to practice building a full-stack Next.js application with authentication and a real database, while learning how to structure client and server logic cleanly using the Next.js App Router.
+
+The app uses Firebase Authentication for user login and Cloud Firestore for storing subscription data per user.
+
+## Features
+
+* User authentication (sign up / login / logout)
+* Add, view, edit, and delete subscriptions
+* Cloud data storage using Firestore (per-user data)
+* Responsive UI
+
+## Tech Stack
+
+* **Next.js**
+* **Firebase Authentication**
+* **Cloud Firestore**
+* **JavaScript**
+
+## What I Learned
+
+* Implementing authentication using Firebase Auth
+* Using Firestore as a cloud database and structuring collections/documents
+* Handling user-specific data using Firestore
+* Managing authentication state across the app using React Context
+* Building CRUD functionality (Create, Read, Update, Delete)
+* Structuring an app using the Next.js App Router
 
 ## Getting Started
 
-First, run the development server:
+```bash
+npm install
+```
+
+## Set up environment variables
+
+Create a `.env.local` file in the root and add:
+
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY=your_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
+
+These values come from your Firebase project settings.
+
+## Run the app
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Notes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was built as part of a course-based learning process to better understand full-stack Next.js patterns, including authentication, CRUD operations, and cloud database integration using Firebase.
