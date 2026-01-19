@@ -50,7 +50,7 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
 
-These values come from your Firebase project settings.
+These values come from your Firebase Console project settings.
 
 ## Run the app
 
