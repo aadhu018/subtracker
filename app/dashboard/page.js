@@ -1,10 +1,5 @@
-import dynamic from "next/dynamic";
-
-const DashboardClient = dynamic(() => import("./DashboardClient"), {
-    ssr: false,
-});
+import DashboardClientWrapper from './DashboardClientWrapper';
 
 export default function Page() {
-    return <DashboardClient />;
+  return <DashboardClientWrapper />;
 }
-
