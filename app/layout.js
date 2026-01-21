@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             <p>|</p>
             <button disabled>Install app</button>
           </div>
-          <p className="copyright">© 2025 SubTracker</p>
+          <p className="copyright">© 2025 SubTracker • <a href="https://aadhudev-portfolio.netlify.app/" target="_blank">aadhuDev</a></p>
         </div>
         <div>
           <p>Facing issues? <a>Get Help</a></p>
