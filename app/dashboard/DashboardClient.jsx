@@ -37,6 +37,7 @@ export default function DashboardClient() {
         setFormData(newData);
     }
 
+    // Handle editing a subscription by pre-filling the form with the subscription data and deleting the original entry
     function handleEditSubscription(index) {
         const data = userData.subscriptions.find((val, valIndex) => {
             return valIndex === index
@@ -54,6 +55,7 @@ export default function DashboardClient() {
         setIsAddEntry(!isAddEntry);
     }
 
+    // Show loading state while checking authentication
     if (loading) {
         return (
             <p>Loading...</p>

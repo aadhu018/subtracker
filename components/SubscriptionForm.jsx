@@ -7,8 +7,8 @@ export default function SubscriptionForm(props) {
     const { onSubmit, closeInput, formData, handleChangeInput, handleResetForm } = props;
     const { handleAddSubscription } = useAuth()
 
-    
 
+    // Handle form submission
     function handleFormSubmit(e) {
         e.preventDefault(); // prevent reloading the webpage
         handleAddSubscription(formData);
@@ -82,7 +82,7 @@ export default function SubscriptionForm(props) {
                     <span>Susbcription Start Date</span>
                     <input value={formData.startDate} onChange={handleChangeInput} type="date" name="startDate" required />
                 </label>
-                
+
                 <label>
                     <span>Status</span>
                     <select value={formData.status} onChange={handleChangeInput} name="status">
@@ -96,7 +96,7 @@ export default function SubscriptionForm(props) {
 
                 <label className="fat-column">
                     <span>Notes</span>
-                    <textarea value={formData.notes} onChange={handleChangeInput} name="notes" placeholder="e.g. Shared with family, includes cloud storage"/>
+                    <textarea value={formData.notes} onChange={handleChangeInput} name="notes" placeholder="e.g. Shared with family, includes cloud storage" />
                 </label>
 
                 <div className="fat-column form-submit-btns">

@@ -5,7 +5,8 @@ export default function SubscriptionsDisplay(props) {
     const { handleShowInput, handleEditSubscription } = props;
     const { handleDeleteSubscription, userData } = useAuth()
 
-    if(!userData?.subscriptions) { return null }
+    // If user has no subscriptions, return null
+    if (!userData?.subscriptions) { return null }
 
     return (
         <section>
@@ -15,6 +16,7 @@ export default function SubscriptionsDisplay(props) {
                     const { name, category, cost, currency, billingFrequency, startDate, notes, status } = sub
 
                     return (
+                        // Subscription Card
                         <div key={subIndex} className="card subscription-card">
                             <div>
                                 <h3>{name}</h3>
@@ -46,11 +48,11 @@ export default function SubscriptionsDisplay(props) {
                             <div className="white-line" />
                             <p>{notes}</p>
                             <div className="subscription-actions">
-                                <button onClick={() => {handleEditSubscription(subIndex)}} className="button-card">
+                                <button onClick={() => { handleEditSubscription(subIndex) }} className="button-card">
                                     <i className="fa-solid fa-pen-to-square"></i>
                                     Edit
                                 </button>
-                                <button onClick={() => {handleDeleteSubscription(subIndex)}} className="button-card">
+                                <button onClick={() => { handleDeleteSubscription(subIndex) }} className="button-card">
                                     <i className="fa-solid fa-trash"></i>
                                     Delete
                                 </button>
@@ -58,6 +60,7 @@ export default function SubscriptionsDisplay(props) {
                         </div>
                     )
                 })}
+                // Add Subscription Card
                 <button onClick={handleShowInput} className="button-card add-subscriptions">
                     <i className="fa-solid fa-plus"></i>
                     <h5>Add new subsciptions</h5>
